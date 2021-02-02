@@ -1,0 +1,102 @@
+.nyan-cat[type="range"] {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 100%;
+	--wave-1: linear-gradient(
+		180deg,
+		#ff0000 15%,
+		#ff9900 15%,
+		#ff9900 30%,
+		#ffff00 30%,
+		#ffff00 45%,
+		#33ff00 45%,
+		#33ff00 60%,
+		#0099ff 60%,
+		#0099ff 75%,
+		#6633ff 75%,
+		#6633ff 90%,
+		transparent 90%
+	);
+	--wave-2: linear-gradient(
+		180deg,
+		transparent 15%,
+		#ff0000 15%,
+		#ff0000 25%,
+		#ff9900 25%,
+		#ff9900 40%,
+		#ffff00 40%,
+		#ffff00 55%,
+		#33ff00 55%,
+		#33ff00 70%,
+		#0099ff 70%,
+		#0099ff 85%,
+		#6633ff 85%,
+		#6633ff 100%
+	);
+
+	--frame-1: var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2);
+	--frame-2: var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1), var(--wave-2), var(--wave-1);
+
+	width: 400px;
+
+	--width: 20px;
+	background-image: var(--frame-1);
+	background-size: var(--width) 20px;
+	background-repeat: no-repeat;
+	background-position:
+	0 0,
+	var(--width) 0,
+	calc(var(--width) * 2) 0,
+	calc(var(--width) * 3) 0,
+	calc(var(--width) * 4) 0,
+	calc(var(--width) * 5) 0,
+	calc(var(--width) * 6) 0,
+	calc(var(--width) * 7) 0,
+	calc(var(--width) * 8) 0,
+	calc(var(--width) * 9) 0,
+	calc(var(--width) * 10) 0,
+	calc(var(--width) * 11) 0,
+	calc(var(--width) * 12) 0,
+	calc(var(--width) * 13) 0,
+	calc(var(--width) * 14) 0,
+	calc(var(--width) * 15) 0,
+	calc(var(--width) * 16) 0,
+	calc(var(--width) * 17) 0,
+	calc(var(--width) * 18) 0,
+	calc(var(--width) * 19) 0,
+	calc(var(--width) * 20) 0;
+
+	animation: .5s wave;
+	animation-iteration-count: infinite;
+}
+
+.nyan-cat[type="range"]:active,
+.nyan-cat[type="range"]:focus {
+	outline: none;
+}
+
+.nyan-cat[type="range"]::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+}
+
+.nyan-cat::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	position: relative;
+	width: 33px;
+	height: 20px;
+	background-image: url("http://www.nyan.cat/cats/original.gif");
+	background-size: cover;
+	transform: translate(0, 1px) scale(1.5);
+}
+
+@keyframes wave {
+	0% {
+		background-image: var(--frame-1);
+	}
+
+	50% {
+		background-image: var(--frame-2);
+	}
+}
