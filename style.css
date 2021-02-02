@@ -86,7 +86,7 @@
 	position: relative;
 	width: 33px;
 	height: 20px;
-	background-image: url("http://www.nyan.cat/cats/original.gif");
+	background-image: url("./assets/original.gif");
 	background-size: cover;
 	transform: translate(0, 1px) scale(1.5);
 }
